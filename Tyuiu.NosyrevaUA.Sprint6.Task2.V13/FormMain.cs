@@ -74,5 +74,10 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task2.V13
         {
             MessageBox.Show("Таск 2 выполнила студент группы ИИПб-23-3 Носырева Юлия Алексеевна", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void dataGridRes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }
