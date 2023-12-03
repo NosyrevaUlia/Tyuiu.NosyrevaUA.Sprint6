@@ -47,6 +47,9 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task0.V23
             MessageBox.Show("Таск 0 выполнила студент группы ИИПб-23-3 Носырева Юлия Алексеевна", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        
+        private void textBoxGetXInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

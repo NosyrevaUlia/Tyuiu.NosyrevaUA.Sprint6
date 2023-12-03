@@ -30,17 +30,17 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task1.V1
         private void InitializeComponent()
         {
             this.groupBoxDescription = new System.Windows.Forms.GroupBox();
-            this.groupBoxOutput = new System.Windows.Forms.GroupBox();
             this.textBoxDescriptionOfTask = new System.Windows.Forms.TextBox();
+            this.groupBoxOutput = new System.Windows.Forms.GroupBox();
+            this.textBoxResDesc = new System.Windows.Forms.TextBox();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
             this.textBoxStepInput = new System.Windows.Forms.GroupBox();
-            this.textBoxStepFirstInput = new System.Windows.Forms.TextBox();
-            this.textBoxStepSecondInput = new System.Windows.Forms.TextBox();
-            this.textBoxFirstStep = new System.Windows.Forms.TextBox();
             this.textBoxSecondStep = new System.Windows.Forms.TextBox();
+            this.textBoxFirstStep = new System.Windows.Forms.TextBox();
+            this.textBoxStepSecondInput = new System.Windows.Forms.TextBox();
+            this.textBoxStepFirstInput = new System.Windows.Forms.TextBox();
             this.buttonHelp = new System.Windows.Forms.Button();
             this.buttonDone = new System.Windows.Forms.Button();
-            this.textBoxResult = new System.Windows.Forms.TextBox();
-            this.textBoxResDesc = new System.Windows.Forms.TextBox();
             this.groupBoxDescription.SuspendLayout();
             this.groupBoxOutput.SuspendLayout();
             this.textBoxStepInput.SuspendLayout();
@@ -56,17 +56,6 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task1.V1
             this.groupBoxDescription.TabStop = false;
             this.groupBoxDescription.Text = "Условие";
             // 
-            // groupBoxOutput
-            // 
-            this.groupBoxOutput.Controls.Add(this.textBoxResDesc);
-            this.groupBoxOutput.Controls.Add(this.textBoxResult);
-            this.groupBoxOutput.Location = new System.Drawing.Point(565, 12);
-            this.groupBoxOutput.Name = "groupBoxOutput";
-            this.groupBoxOutput.Size = new System.Drawing.Size(244, 299);
-            this.groupBoxOutput.TabIndex = 1;
-            this.groupBoxOutput.TabStop = false;
-            this.groupBoxOutput.Text = "Вывод данных";
-            // 
             // textBoxDescriptionOfTask
             // 
             this.textBoxDescriptionOfTask.BackColor = System.Drawing.SystemColors.Menu;
@@ -79,6 +68,38 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task1.V1
             this.textBoxDescriptionOfTask.TabIndex = 0;
             this.textBoxDescriptionOfTask.Text = "Протабулировать функцию cos(2x) + (sin(x)) / (x + 2,5) + 2x на заданном диапазоне" +
     ".\r\nРезультат вывести в таблице.\r\n";
+            // 
+            // groupBoxOutput
+            // 
+            this.groupBoxOutput.Controls.Add(this.textBoxResDesc);
+            this.groupBoxOutput.Controls.Add(this.textBoxResult);
+            this.groupBoxOutput.Location = new System.Drawing.Point(565, 12);
+            this.groupBoxOutput.Name = "groupBoxOutput";
+            this.groupBoxOutput.Size = new System.Drawing.Size(244, 299);
+            this.groupBoxOutput.TabIndex = 1;
+            this.groupBoxOutput.TabStop = false;
+            this.groupBoxOutput.Text = "Вывод данных";
+            // 
+            // textBoxResDesc
+            // 
+            this.textBoxResDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxResDesc.Location = new System.Drawing.Point(7, 25);
+            this.textBoxResDesc.Name = "textBoxResDesc";
+            this.textBoxResDesc.ReadOnly = true;
+            this.textBoxResDesc.Size = new System.Drawing.Size(100, 19);
+            this.textBoxResDesc.TabIndex = 1;
+            this.textBoxResDesc.Text = "Результат:";
+            // 
+            // textBoxResult
+            // 
+            this.textBoxResult.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxResult.Location = new System.Drawing.Point(7, 55);
+            this.textBoxResult.Multiline = true;
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxResult.Size = new System.Drawing.Size(240, 255);
+            this.textBoxResult.TabIndex = 0;
+            this.textBoxResult.TextChanged += new System.EventHandler(this.textBoxResult_TextChanged);
             // 
             // textBoxStepInput
             // 
@@ -93,19 +114,15 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task1.V1
             this.textBoxStepInput.TabStop = false;
             this.textBoxStepInput.Text = "Ввод данных";
             // 
-            // textBoxStepFirstInput
+            // textBoxSecondStep
             // 
-            this.textBoxStepFirstInput.Location = new System.Drawing.Point(7, 71);
-            this.textBoxStepFirstInput.Name = "textBoxStepFirstInput";
-            this.textBoxStepFirstInput.Size = new System.Drawing.Size(133, 26);
-            this.textBoxStepFirstInput.TabIndex = 0;
-            // 
-            // textBoxStepSecondInput
-            // 
-            this.textBoxStepSecondInput.Location = new System.Drawing.Point(151, 71);
-            this.textBoxStepSecondInput.Name = "textBoxStepSecondInput";
-            this.textBoxStepSecondInput.Size = new System.Drawing.Size(133, 26);
-            this.textBoxStepSecondInput.TabIndex = 0;
+            this.textBoxSecondStep.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSecondStep.Location = new System.Drawing.Point(151, 36);
+            this.textBoxSecondStep.Name = "textBoxSecondStep";
+            this.textBoxSecondStep.ReadOnly = true;
+            this.textBoxSecondStep.Size = new System.Drawing.Size(100, 19);
+            this.textBoxSecondStep.TabIndex = 1;
+            this.textBoxSecondStep.Text = "Конец шага:";
             // 
             // textBoxFirstStep
             // 
@@ -117,15 +134,19 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task1.V1
             this.textBoxFirstStep.TabIndex = 1;
             this.textBoxFirstStep.Text = "Старт шага:";
             // 
-            // textBoxSecondStep
+            // textBoxStepSecondInput
             // 
-            this.textBoxSecondStep.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSecondStep.Location = new System.Drawing.Point(151, 36);
-            this.textBoxSecondStep.Name = "textBoxSecondStep";
-            this.textBoxSecondStep.ReadOnly = true;
-            this.textBoxSecondStep.Size = new System.Drawing.Size(100, 19);
-            this.textBoxSecondStep.TabIndex = 1;
-            this.textBoxSecondStep.Text = "Конец шага:";
+            this.textBoxStepSecondInput.Location = new System.Drawing.Point(151, 71);
+            this.textBoxStepSecondInput.Name = "textBoxStepSecondInput";
+            this.textBoxStepSecondInput.Size = new System.Drawing.Size(133, 26);
+            this.textBoxStepSecondInput.TabIndex = 0;
+            // 
+            // textBoxStepFirstInput
+            // 
+            this.textBoxStepFirstInput.Location = new System.Drawing.Point(7, 71);
+            this.textBoxStepFirstInput.Name = "textBoxStepFirstInput";
+            this.textBoxStepFirstInput.Size = new System.Drawing.Size(133, 26);
+            this.textBoxStepFirstInput.TabIndex = 0;
             // 
             // buttonHelp
             // 
@@ -149,26 +170,6 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task1.V1
             this.buttonDone.UseVisualStyleBackColor = false;
             this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
-            // textBoxResult
-            // 
-            this.textBoxResult.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxResult.Location = new System.Drawing.Point(7, 55);
-            this.textBoxResult.Multiline = true;
-            this.textBoxResult.Name = "textBoxResult";
-            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResult.Size = new System.Drawing.Size(240, 255);
-            this.textBoxResult.TabIndex = 0;
-            // 
-            // textBoxResDesc
-            // 
-            this.textBoxResDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxResDesc.Location = new System.Drawing.Point(7, 25);
-            this.textBoxResDesc.Name = "textBoxResDesc";
-            this.textBoxResDesc.ReadOnly = true;
-            this.textBoxResDesc.Size = new System.Drawing.Size(100, 19);
-            this.textBoxResDesc.TabIndex = 1;
-            this.textBoxResDesc.Text = "Результат:";
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -184,7 +185,8 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task1.V1
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Tag = "";
+            this.Text = "Спринт 6 | Таск 1 | Вариант 1 | Носырева Ю. А.";
             this.groupBoxDescription.ResumeLayout(false);
             this.groupBoxDescription.PerformLayout();
             this.groupBoxOutput.ResumeLayout(false);

@@ -99,6 +99,7 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task0.V23
             this.textBoxGetXInput.Name = "textBoxGetXInput";
             this.textBoxGetXInput.Size = new System.Drawing.Size(126, 26);
             this.textBoxGetXInput.TabIndex = 1;
+            this.textBoxGetXInput.TextChanged += new System.EventHandler(this.textBoxGetXInput_TextChanged);
             this.textBoxGetXInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGetXInput_KeyPress);
             // 
             // textBoxX
