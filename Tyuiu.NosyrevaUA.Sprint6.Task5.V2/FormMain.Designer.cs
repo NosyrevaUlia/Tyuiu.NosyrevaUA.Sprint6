@@ -33,24 +33,24 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelUp = new System.Windows.Forms.Panel();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.panelCentre = new System.Windows.Forms.Panel();
-            this.splitterleftcentre = new System.Windows.Forms.Splitter();
-            this.groupBoxDescription = new System.Windows.Forms.GroupBox();
-            this.groupBoxInput = new System.Windows.Forms.GroupBox();
-            this.chartNums = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.buttonDone = new System.Windows.Forms.Button();
-            this.buttonOpenFile = new System.Windows.Forms.Button();
             this.buttonHelp = new System.Windows.Forms.Button();
-            this.dataGridViewNums = new System.Windows.Forms.DataGridView();
+            this.buttonOpenFile = new System.Windows.Forms.Button();
+            this.buttonDone = new System.Windows.Forms.Button();
+            this.groupBoxDescription = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.groupBoxInput = new System.Windows.Forms.GroupBox();
+            this.dataGridViewNums = new System.Windows.Forms.DataGridView();
+            this.panelCentre = new System.Windows.Forms.Panel();
+            this.chartNums = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.splitterleftcentre = new System.Windows.Forms.Splitter();
             this.panelUp.SuspendLayout();
-            this.panelLeft.SuspendLayout();
-            this.panelCentre.SuspendLayout();
             this.groupBoxDescription.SuspendLayout();
+            this.panelLeft.SuspendLayout();
             this.groupBoxInput.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartNums)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNums)).BeginInit();
+            this.panelCentre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartNums)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUp
@@ -65,32 +65,39 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2
             this.panelUp.Size = new System.Drawing.Size(869, 100);
             this.panelUp.TabIndex = 0;
             // 
-            // panelLeft
+            // buttonHelp
             // 
-            this.panelLeft.Controls.Add(this.groupBoxInput);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 100);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(233, 350);
-            this.panelLeft.TabIndex = 1;
+            this.buttonHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonHelp.Location = new System.Drawing.Point(756, 12);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(107, 81);
+            this.buttonHelp.TabIndex = 1;
+            this.buttonHelp.Text = "Справка";
+            this.buttonHelp.UseVisualStyleBackColor = false;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
-            // panelCentre
+            // buttonOpenFile
             // 
-            this.panelCentre.Controls.Add(this.chartNums);
-            this.panelCentre.Controls.Add(this.splitterleftcentre);
-            this.panelCentre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCentre.Location = new System.Drawing.Point(233, 100);
-            this.panelCentre.Name = "panelCentre";
-            this.panelCentre.Size = new System.Drawing.Size(636, 350);
-            this.panelCentre.TabIndex = 2;
+            this.buttonOpenFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonOpenFile.Location = new System.Drawing.Point(643, 12);
+            this.buttonOpenFile.Name = "buttonOpenFile";
+            this.buttonOpenFile.Size = new System.Drawing.Size(107, 81);
+            this.buttonOpenFile.TabIndex = 1;
+            this.buttonOpenFile.Text = "Открыть файл";
+            this.buttonOpenFile.UseVisualStyleBackColor = false;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
-            // splitterleftcentre
+            // buttonDone
             // 
-            this.splitterleftcentre.Location = new System.Drawing.Point(0, 0);
-            this.splitterleftcentre.Name = "splitterleftcentre";
-            this.splitterleftcentre.Size = new System.Drawing.Size(3, 350);
-            this.splitterleftcentre.TabIndex = 0;
-            this.splitterleftcentre.TabStop = false;
+            this.buttonDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonDone.Location = new System.Drawing.Point(530, 12);
+            this.buttonDone.Name = "buttonDone";
+            this.buttonDone.Size = new System.Drawing.Size(107, 81);
+            this.buttonDone.TabIndex = 1;
+            this.buttonDone.Text = "Выполнить";
+            this.buttonDone.UseVisualStyleBackColor = false;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
             // groupBoxDescription
             // 
@@ -102,6 +109,27 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2
             this.groupBoxDescription.TabStop = false;
             this.groupBoxDescription.Text = "Условие:";
             // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(3, 22);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(517, 75);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Прочитать данные из файла InPutFileTask5V2.txt. Вывести в dataGridView. Вывести в" +
+    "се отрицательные числа. Построить диаграмму по этим значениям. \r\n";
+            // 
+            // panelLeft
+            // 
+            this.panelLeft.Controls.Add(this.groupBoxInput);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 100);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(233, 350);
+            this.panelLeft.TabIndex = 1;
+            // 
             // groupBoxInput
             // 
             this.groupBoxInput.Controls.Add(this.dataGridViewNums);
@@ -112,6 +140,28 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2
             this.groupBoxInput.TabIndex = 0;
             this.groupBoxInput.TabStop = false;
             this.groupBoxInput.Text = "Вывод данных:";
+            // 
+            // dataGridViewNums
+            // 
+            this.dataGridViewNums.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNums.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewNums.Location = new System.Drawing.Point(3, 22);
+            this.dataGridViewNums.Name = "dataGridViewNums";
+            this.dataGridViewNums.RowHeadersWidth = 62;
+            this.dataGridViewNums.RowTemplate.Height = 28;
+            this.dataGridViewNums.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewNums.Size = new System.Drawing.Size(227, 325);
+            this.dataGridViewNums.TabIndex = 0;
+            // 
+            // panelCentre
+            // 
+            this.panelCentre.Controls.Add(this.chartNums);
+            this.panelCentre.Controls.Add(this.splitterleftcentre);
+            this.panelCentre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCentre.Location = new System.Drawing.Point(233, 100);
+            this.panelCentre.Name = "panelCentre";
+            this.panelCentre.Size = new System.Drawing.Size(636, 350);
+            this.panelCentre.TabIndex = 2;
             // 
             // chartNums
             // 
@@ -130,63 +180,13 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2
             this.chartNums.Size = new System.Drawing.Size(633, 350);
             this.chartNums.TabIndex = 1;
             // 
-            // buttonDone
+            // splitterleftcentre
             // 
-            this.buttonDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.buttonDone.Location = new System.Drawing.Point(530, 12);
-            this.buttonDone.Name = "buttonDone";
-            this.buttonDone.Size = new System.Drawing.Size(107, 81);
-            this.buttonDone.TabIndex = 1;
-            this.buttonDone.Text = "Выполнить";
-            this.buttonDone.UseVisualStyleBackColor = false;
-            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
-            // 
-            // buttonOpenFile
-            // 
-            this.buttonOpenFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.buttonOpenFile.Location = new System.Drawing.Point(643, 12);
-            this.buttonOpenFile.Name = "buttonOpenFile";
-            this.buttonOpenFile.Size = new System.Drawing.Size(107, 81);
-            this.buttonOpenFile.TabIndex = 1;
-            this.buttonOpenFile.Text = "Открыть файл";
-            this.buttonOpenFile.UseVisualStyleBackColor = false;
-            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
-            // 
-            // buttonHelp
-            // 
-            this.buttonHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonHelp.Location = new System.Drawing.Point(756, 12);
-            this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(107, 81);
-            this.buttonHelp.TabIndex = 1;
-            this.buttonHelp.Text = "Справка";
-            this.buttonHelp.UseVisualStyleBackColor = false;
-            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
-            // 
-            // dataGridViewNums
-            // 
-            this.dataGridViewNums.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNums.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewNums.Location = new System.Drawing.Point(3, 22);
-            this.dataGridViewNums.Name = "dataGridViewNums";
-            this.dataGridViewNums.RowHeadersWidth = 62;
-            this.dataGridViewNums.RowTemplate.Height = 28;
-            this.dataGridViewNums.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewNums.Size = new System.Drawing.Size(227, 325);
-            this.dataGridViewNums.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 22);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(517, 75);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Прочитать данные из файла InPutFileTask5V2.txt. Вывести в dataGridView. Вывести в" +
-    "се отрицательные числа. Построить диаграмму по этим значениям. \r\n";
+            this.splitterleftcentre.Location = new System.Drawing.Point(0, 0);
+            this.splitterleftcentre.Name = "splitterleftcentre";
+            this.splitterleftcentre.Size = new System.Drawing.Size(3, 350);
+            this.splitterleftcentre.TabIndex = 0;
+            this.splitterleftcentre.TabStop = false;
             // 
             // FormMain
             // 
@@ -198,15 +198,16 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2
             this.Controls.Add(this.panelUp);
             this.MinimumSize = new System.Drawing.Size(891, 506);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Спринт 6 | Таск 5 | Вариант 2 | Носырева Ю. А.|";
             this.panelUp.ResumeLayout(false);
-            this.panelLeft.ResumeLayout(false);
-            this.panelCentre.ResumeLayout(false);
             this.groupBoxDescription.ResumeLayout(false);
             this.groupBoxDescription.PerformLayout();
+            this.panelLeft.ResumeLayout(false);
             this.groupBoxInput.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartNums)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNums)).EndInit();
+            this.panelCentre.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartNums)).EndInit();
             this.ResumeLayout(false);
 
         }

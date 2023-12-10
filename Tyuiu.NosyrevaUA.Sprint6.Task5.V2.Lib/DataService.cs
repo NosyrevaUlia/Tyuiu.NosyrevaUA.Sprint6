@@ -13,7 +13,7 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2.Lib
         public int len = 0;
         public double[] LoadFromDataFile(string path)
         {
-            using (StreamReader reader = new StreamReader(path + ".txt"))
+            using (StreamReader reader = new StreamReader(path+".txt"))
             {
                 string line;
                 while((line = reader.ReadLine()) != null)
@@ -26,7 +26,7 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2.Lib
 
             int index = 0;
 
-            using (StreamReader reader = new StreamReader(path + ".txt"))
+            using (StreamReader reader = new StreamReader(path+".txt"))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)

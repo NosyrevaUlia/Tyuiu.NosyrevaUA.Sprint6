@@ -10,7 +10,7 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2.Test
         [TestMethod]
         public void ValidLoadFromDataFile()
         {
-            string path = @"C:\Users\Юлия\source\repos\Tyuiu.NosyrevaUA.Sprint6\Tyuiu.NosyrevaUA.Sprint6.Task5.V2\bin\Debug\InPutFileTask5V2.txt";
+            string path = @"C:\Users\Юлия\source\repos\Tyuiu.NosyrevaUA.Sprint6\Tyuiu.NosyrevaUA.Sprint6.Task5.V2\bin\Debug\InPutFileTask5V2";
             DataService ds = new DataService();
             double[] res = ds.LoadFromDataFile(path);
             double[] w = { -1, -2, -3, -5, -6, -7, -8, -9, -10 };

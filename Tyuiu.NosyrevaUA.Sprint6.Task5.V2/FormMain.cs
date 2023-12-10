@@ -24,6 +24,7 @@ namespace Tyuiu.NosyrevaUA.Sprint6.Task5.V2
         private void buttonDone_Click(object sender, EventArgs e)
         {
             buttonDone.BackColor = Color.AliceBlue;
+           
             dataGridViewNums.ColumnCount = 2;
             dataGridViewNums.Columns[0].Width = 20;
             dataGridViewNums.Columns[1].Width = 50;
